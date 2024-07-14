@@ -24,9 +24,7 @@ const Contact = () => {
 
     alert("Message sended successfully");
 
-    setName("");
-    setEmail("");
-    setMessage("");
+ 
   };
 
   return (

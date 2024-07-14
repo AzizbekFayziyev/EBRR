@@ -25,7 +25,10 @@ export const getTranslations = async (lang) => {
 export const postForm = async (name, email, descriptions) => {
   try {
     const response = await axios.post("https://verel-auto.uz/api/zayavkas", {
-      fist_name: name,
+      first_name: name,
+      last_name: "null",
+      phone_number: "null",
+      company: "null",
       email,
       descriptions,
     });
