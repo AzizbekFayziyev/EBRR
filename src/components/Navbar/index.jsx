@@ -89,21 +89,29 @@ const Navbar = () => {
         }`}
       >
         <ul onClick={() => setMenu(false)}>
-          <li>
-            <Link href="#">Ev</Link>
-          </li>
+        <li>
+                <Link href="#">
+                  <Translation keyCode="navbar.link1" />
+                </Link>
+              </li>
 
-          <li>
-            <Link href="#about">Hakkımızda</Link>
-          </li>
+              <li>
+                <Link href="#about">
+                  <Translation keyCode="navbar.link2" />
+                </Link>
+              </li>
 
-          <li>
-            <Link href="#services">Hizmetler</Link>
-          </li>
+              <li>
+                <Link href="#services">
+                  <Translation keyCode="navbar.link3" />
+                </Link>
+              </li>
 
-          <li>
-            <Link href="#contact">Bağlantı</Link>
-          </li>
+              <li>
+                <Link href="#contact">
+                  <Translation keyCode="navbar.link4" />
+                </Link>
+              </li>
         </ul>
 
         <div className={styles.langs}>
