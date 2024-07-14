@@ -13,6 +13,14 @@
 
 // global styles
 
+::-webkit-scrollbar {
+  @apply w-2 bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light;
+}
+
 @mixin wrapperBordered() {
   @apply border-x border-darkBorder/35 max-w-[1440px] mx-auto;
 }

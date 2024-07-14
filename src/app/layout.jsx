@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContextWrapper from "@/context";
 import GoTop from "@/components/UI/GoTop";
-import Translation from "@/components/UI/Translation";
+import Loader from "@/components/UI/Loader";
 
 const GolosText = Golos_Text({
   subsets: ["latin"],
@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
           <Footer />
 
           <GoTop />
+          <Loader />
         </ContextWrapper>
       </body>
     </html>
