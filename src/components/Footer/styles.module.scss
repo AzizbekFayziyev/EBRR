@@ -1,0 +1,75 @@
+.footer {
+  @apply bg-dark text-white;
+
+  .footerContent {
+    @apply max-w-[1440px] mx-auto pt-10 sm:px-10 px-4;
+
+    .footerNav {
+      @apply flex lg:flex-nowrap flex-wrap lg:justify-between justify-center lg:text-left lg:gap-10 gap-16;
+
+      .navItem {
+        @apply max-w-[380px] w-full lg:w-auto;
+
+        p {
+          @apply mt-6;
+        }
+
+        h3 {
+          @apply font-medium mb-5;
+        }
+
+        ul {
+          @apply flex flex-col gap-5;
+
+          a {
+            @apply transition-colors;
+
+            &:hover {
+              @apply text-primary;
+            }
+          }
+        }
+
+        .form {
+          @apply bg-[#48474A] p-2 flex flex-col gap-3;
+
+          input {
+            @apply p-4 bg-[#5D5D5F] outline-none border-4 border-transparent transition-colors;
+
+            &:focus {
+              @apply border-primary;
+            }
+          }
+
+          button {
+            @apply p-4;
+          }
+        }
+
+        .social {
+          @apply mt-10;
+
+          h4 {
+            @apply text-[#9A999B] mb-4;
+          }
+
+          img {
+            @apply transition-transform;
+
+            &:hover {
+              @apply scale-110;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    @apply py-6  border-t border-t-light mt-10;
+
+    h3 {
+      @apply text-[#9A999B] text-center px-2;
+    }
+  }
+}

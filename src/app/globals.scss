@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// fonts
+@font-face {
+  font-family: "RF Dewi Condensed";
+  font-style: bold;
+  font-weight: 700;
+  src: url(/fonts/rf-dewi/RFDewiCondensed-Ultrabold.woff2) format("woff2"),
+    url(/fonts/rf-dewi/RFDewiCondensed-Ultrabold.woff) format("woff");
+}
+
+// global styles
+
+@mixin wrapperBordered() {
+  @apply border-x border-darkBorder/35 max-w-[1440px] mx-auto;
+}
+
+html,
+body {
+  @apply overflow-x-hidden scroll-smooth;
+}
+
+.wrapper {
+  @apply max-w-[1440px] mx-auto px-2;
+}
+
+.wrapperInside {
+  @apply max-w-[1196px] mx-auto px-2;
+}
+
+.wrapperBordered {
+  @include wrapperBordered();
+}
+
+.wrapperBorderedContent {
+  @include wrapperBordered();
+  @apply border-[#E7E7ED];
+}

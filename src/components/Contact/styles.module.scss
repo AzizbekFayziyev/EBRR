@@ -1,0 +1,74 @@
+.contact {
+  .content {
+    @apply bg-[#F5F5F7] sm:p-10 p-2 flex lg:flex-row flex-col lg:justify-between items-center gap-8 lg:gap-0;
+
+    .form {
+      @apply lg:max-w-[650px] w-full flex flex-col gap-8 lg:mr-10 mr-0;
+
+      input,
+      textarea {
+        @apply placeholder:text-light py-4 border-b border-[#C2C2C3] bg-transparent outline-none transition-colors focus:border-primary focus:border-b-2;
+      }
+
+      button:hover {
+        @apply border-dark text-dark;
+      }
+    }
+
+    .info {
+      @apply sm:p-10 p-2 bg-white;
+
+      h2 {
+        @apply text-dark text-2xl font-bold mb-6;
+      }
+
+      .map {
+        @apply border-0 w-full min-h-[310px] mt-10;
+      }
+
+      .infoItems {
+        @apply flex flex-col gap-6;
+
+        .itemFlex {
+          @apply flex sm:flex-row flex-col gap-6;
+
+          h6 {
+            @apply max-w-[270px];
+          }
+
+          &:nth-last-child(1) {
+            .item {
+              @apply mr-12;
+            }
+          }
+        }
+
+        .item {
+          h5 {
+            @apply text-light mb-2;
+          }
+
+          img {
+            @apply transition-transform;
+
+            &:hover {
+              @apply scale-110;
+            }
+          }
+
+          h6,
+          a {
+            @apply text-dark;
+          }
+
+          a {
+            @apply transition-colors;
+            &:hover {
+              @apply text-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.services {
+  .cards {
+    @apply sm:mt-20 mt-10 flex flex-col;
+
+    .card {
+      @apply flex lg:flex-nowrap flex-wrap gap-10 even:flex-row-reverse p-10 border-y border-y-darkBorder;
+
+      img {
+        @apply object-cover max-h-[500px] lg:max-w-[650px] w-full;
+      }
+
+      h3 {
+        @apply text-2xl font-medium text-dark;
+      }
+
+      div {
+        @apply sm:text-xl text-lg mt-4 text-light;
+      }
+    }
+  }
+}

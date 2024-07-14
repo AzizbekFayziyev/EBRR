@@ -1,0 +1,98 @@
+.navbar {
+  @apply absolute top-0 left-0 z-50 text-white w-full border-b py-5 border-b-darkBorder/35 overflow-hidden;
+
+  a {
+    @apply transition-colors;
+
+    &:hover {
+      @apply text-darkLight;
+    }
+  }
+
+  .content {
+    @apply flex items-center justify-between px-2;
+
+    .links {
+      img {
+        @apply mr-10;
+      }
+
+      @apply flex gap-10 items-center;
+    }
+
+    .actions {
+      @apply flex items-center gap-6 relative;
+
+      .menu {
+        @apply hidden;
+      }
+
+      .langs {
+        @apply flex gap-8 text-darkLight p-5;
+
+        button {
+          &.active {
+            @apply text-white;
+          }
+        }
+      }
+
+      .divider {
+        @apply absolute w-[1px] h-[100px] bg-darkBorder/35 left-[53%] top-[50%];
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+// Menu
+
+.mobileMenu {
+  @apply absolute left-0 top-0 w-full h-full bg-primary z-40 grid place-content-center text-center transition-transform;
+
+  ul {
+    @apply flex flex-col gap-6;
+    li {
+      @apply text-white text-xl;
+    }
+  }
+
+  .langs {
+    @apply mt-12 flex gap-4 justify-center text-darkLight text-xl;
+
+    button {
+      &.active {
+        @apply text-white;
+      }
+    }
+  }
+}
+
+// responsive
+
+@media (max-width: 940px) {
+  .navbar .content .actions {
+    a {
+      @apply hidden;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar .content {
+    .actions {
+      .langs,
+      .divider {
+        @apply hidden;
+      }
+
+      .menu {
+        @apply block;
+      }
+    }
+
+    li {
+      @apply hidden;
+    }
+  }
+}

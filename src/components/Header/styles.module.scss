@@ -1,0 +1,120 @@
+.header {
+  @apply h-dvh grid place-content-center text-white;
+
+  .slides {
+    img {
+      @apply hidden;
+
+      &.active {
+        @apply block -z-10 brightness-[.3] object-cover;
+        animation: slide 1s ease;
+      }
+    }
+  }
+
+  .content {
+    @apply max-w-[720px];
+
+    h1 {
+      @apply text-4xl font-semibold leading-tight -tracking-tighter;
+    }
+
+    .buttons {
+      @apply mt-10 flex gap-4;
+    }
+  }
+}
+
+.carouselController {
+  @apply absolute bottom-0 left-0 bg-white flex items-center;
+
+  .down {
+    @apply p-6 w-[200px] transition-colors grid place-content-center;
+
+    &:hover {
+      @apply bg-primary;
+
+      svg {
+        @apply text-white;
+      }
+    }
+  }
+
+  .item {
+    @apply p-6 w-[180px] border-x border-darkBorder grid place-content-center;
+
+    .pagination {
+      @apply flex;
+
+      div {
+        @apply border-2 border-transparent p-2 rounded-full;
+
+        span {
+          @apply block w-[10px] h-[10px] rounded-full bg-darkBorder border-darkBorder;
+        }
+
+        &.active {
+          span {
+            @apply bg-primary;
+          }
+        }
+      }
+    }
+
+    .arrows {
+      @apply flex gap-6;
+
+      svg {
+        &:hover {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    @apply opacity-10;
+  }
+
+  to {
+    @apply opacity-100;
+  }
+}
+
+// responsive
+
+@media (max-width: 620px) {
+  .header .content {
+    @apply flex flex-col items-center text-center;
+  }
+
+  .carouselController {
+    @apply w-full;
+
+    .down {
+      @apply hidden;
+    }
+
+    .item{
+      @apply w-full;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .header .content {
+    h1 {
+      @apply text-3xl;
+    }
+
+    .buttons {
+      @apply flex-col w-full mt-6;
+
+      button {
+        @apply p-4;
+      }
+    }
+  }
+}

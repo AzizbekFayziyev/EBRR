@@ -1,0 +1,30 @@
+.advantages {
+  .cards {
+    @apply grid sm:grid-cols-2 grid-cols-1 mt-10;
+
+    .card {
+      @apply border border-darkBorder p-8  transition-colors duration-300;
+
+      &:hover {
+        @apply bg-primary;
+
+        h3,
+        div {
+          @apply text-white;
+        }
+      }
+
+      h3 {
+        @apply text-xl font-medium text-dark transition-colors;
+
+        span {
+          @apply bg-primary text-white text-base font-medium p-1 px-2 mr-4;
+        }
+      }
+
+      div {
+        @apply mt-4 text-dark transition-colors;
+      }
+    }
+  }
+}
