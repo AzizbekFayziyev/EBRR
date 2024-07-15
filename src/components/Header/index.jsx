@@ -65,7 +65,7 @@ const Header = () => {
               <Image
                 key={slide.id}
                 className={currentSlide === id + 1 ? styles.active : ""}
-                src={"https://verel-auto.uz/storage/" + slide.photo}
+                src={process.env.NEXT_PUBLIC_IMAGE_URL + slide.photo}
                 alt={"slide photo"}
                 fill
               />

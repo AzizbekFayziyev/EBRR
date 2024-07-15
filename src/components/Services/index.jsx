@@ -5,7 +5,7 @@ import ServiceItem from "./ServiceItem";
 import Translation from "../UI/Translation";
 
 async function getData() {
-  const res = await fetch("https://verel-auto.uz" + "/api/portfolios");
+  const res = await fetch(process.env.NEXT_PUBLIC_API + "/api/portfolios");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -26,7 +26,7 @@ export default async function Services() {
 
         <div className={styles.cards}>
           {services?.map((service) => (
-            <ServiceItem service={service} img={"https://verel-auto.uz/storage/"} key={service.id} />
+            <ServiceItem service={service} img={process.env.NEXT_PUBLIC_IMAGE_URL} key={service.id} />
           ))}
         </div>
       </div>

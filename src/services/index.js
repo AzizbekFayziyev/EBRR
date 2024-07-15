@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getSlides = async () => {
   try {
-    const { data } = await axios.get("https://verel-auto.uz" + "/api/banners");
+    const { data } = await axios.get(process.env.NEXT_PUBLIC_API + "/api/banners");
 
     return data;
   } catch (error) {
@@ -13,7 +13,7 @@ export const getSlides = async () => {
 export const getTranslations = async (lang) => {
   try {
     const { data } = await axios.get(
-      "https://verel-auto.uz" + `/api/translations/${lang}`
+      process.env.NEXT_PUBLIC_API + `/api/translations/${lang}`
     );
 
     return data;
@@ -24,7 +24,7 @@ export const getTranslations = async (lang) => {
 
 export const postForm = async (name, email, descriptions) => {
   try {
-    const response = await axios.post("https://verel-auto.uz/api/zayavkas", {
+    const response = await axios.post(process.env.NEXT_PUBLIC_API + "/api/zayavkas", {
       first_name: name,
       email,
       descriptions,

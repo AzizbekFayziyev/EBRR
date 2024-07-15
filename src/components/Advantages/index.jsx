@@ -5,7 +5,7 @@ import AdvantageItem from "./AdvantageItem";
 import Translation from "../UI/Translation";
 
 async function getData() {
-  const res = await fetch("https://verel-auto.uz" + "/api/posts")
+  const res = await fetch(process.env.NEXT_PUBLIC_API + "/api/posts")
  
   if (!res.ok) {
     throw new Error('Failed to fetch data')
