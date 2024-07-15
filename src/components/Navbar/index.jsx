@@ -26,14 +26,14 @@ const Navbar = () => {
               <Image src="/logo.svg" width={120} height={50} alt="logo" />
 
               <li>
-                <Link href="#">
-                  <Translation keyCode="navbar.link1" />
+                <Link href="#about">
+                  <Translation keyCode="navbar.link2" />
                 </Link>
               </li>
 
               <li>
-                <Link href="#about">
-                  <Translation keyCode="navbar.link2" />
+                <Link href="#advantages">
+                  <Translation keyCode="navbar.link5" />
                 </Link>
               </li>
 
@@ -89,29 +89,29 @@ const Navbar = () => {
         }`}
       >
         <ul onClick={() => setMenu(false)}>
-        <li>
-                <Link href="#">
-                  <Translation keyCode="navbar.link1" />
-                </Link>
-              </li>
+          <li>
+            <Link href="#about">
+              <Translation keyCode="navbar.link2" />
+            </Link>
+          </li>
 
-              <li>
-                <Link href="#about">
-                  <Translation keyCode="navbar.link2" />
-                </Link>
-              </li>
+          <li>
+            <Link href="#advantages">
+              <Translation keyCode="navbar.link5" />
+            </Link>
+          </li>
 
-              <li>
-                <Link href="#services">
-                  <Translation keyCode="navbar.link3" />
-                </Link>
-              </li>
+          <li>
+            <Link href="#services">
+              <Translation keyCode="navbar.link3" />
+            </Link>
+          </li>
 
-              <li>
-                <Link href="#contact">
-                  <Translation keyCode="navbar.link4" />
-                </Link>
-              </li>
+          <li>
+            <Link href="#contact">
+              <Translation keyCode="navbar.link4" />
+            </Link>
+          </li>
         </ul>
 
         <div className={styles.langs}>

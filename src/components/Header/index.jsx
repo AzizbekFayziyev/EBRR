@@ -48,7 +48,7 @@ const Header = () => {
       } else {
         setCurrentSlide(1);
       }
-    }, 5000);
+    }, 5500);
 
     return () => {
       clearInterval(autoSlide);
@@ -78,13 +78,18 @@ const Header = () => {
             </h1>
 
             <div className={styles.buttons}>
-              <Button>
-                <Translation keyCode="header.contactBtn" />
-                <Phone size={20} fill="#fff" />
-              </Button>
-              <Button isPrimary={false}>
-                <Translation keyCode="header.aboutBtn" />
-              </Button>
+              <Link href="#contact">
+                <Button>
+                  <Translation keyCode="header.contactBtn" />
+                  <Phone size={20} fill="#fff" />
+                </Button>
+              </Link>
+
+              <Link href="#about">
+                <Button isPrimary={false}>
+                  <Translation keyCode="header.aboutBtn" />
+                </Button>
+              </Link>
             </div>
           </div>
         </header>
