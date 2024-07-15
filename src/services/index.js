@@ -26,11 +26,11 @@ export const postForm = async (name, email, descriptions) => {
   try {
     const response = await axios.post("https://verel-auto.uz/api/zayavkas", {
       first_name: name,
-      last_name: "null",
-      phone_number: "null",
-      company: "null",
       email,
       descriptions,
+      company: ".",
+      last_name: ".",
+      phone_number: "."
     });
     return response.data;
   } catch (error) {

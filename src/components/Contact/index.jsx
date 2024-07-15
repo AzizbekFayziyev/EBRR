@@ -18,13 +18,16 @@ const Contact = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const res = await postForm(name, email, message);
+
+    const res = await postForm(name, email, message).then(() => {
+      setName("");
+      setEmail("");
+      setMessage("");
+    });
 
     console.log(res);
 
-    alert("Message sended successfully");
-
- 
+    alert(TranslationMethod("alertMessages.form", translations, currentLang));
   };
 
   return (
@@ -61,6 +64,7 @@ const Contact = () => {
             />
 
             <textarea
+              required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={8}

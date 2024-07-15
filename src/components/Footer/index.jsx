@@ -1,14 +1,34 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/UI/Button";
 import Translation, { TranslationMethod } from "../UI/Translation";
 import { AppContext } from "@/context";
+import { postForm } from "@/services";
 
 const Footer = () => {
   const { translations, currentLang } = useContext(AppContext);
+  const [email, setEmail] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await postForm("no name", email, "get subscriber").then(() => {
+      setEmail("");
+    });
+
+    console.log(res);
+
+    alert(
+      TranslationMethod(
+        "alertMessages.getSubscriber",
+        translations,
+        currentLang
+      )
+    );
+  };
 
   return (
     <footer className={styles.footer}>
@@ -74,10 +94,12 @@ const Footer = () => {
           </div>
 
           <div className={styles.navItem}>
-            <form className={styles.form}>
+            <form onSubmit={onSubmit} className={styles.form}>
               <input
                 required
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={TranslationMethod(
                   "form.email",
                   translations,
