@@ -27,10 +27,7 @@ export const postForm = async (name, email, descriptions) => {
     const response = await axios.post(process.env.NEXT_PUBLIC_API + "/api/zayavkas", {
       first_name: name,
       email,
-      descriptions,
-      company: ".",
-      last_name: ".",
-      phone_number: "."
+      descriptions
     });
     return response.data;
   } catch (error) {
