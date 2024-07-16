@@ -111,7 +111,7 @@ const Footer = () => {
               </Button>
             </form>
 
-            <div className={styles.social}>
+            {/* <div className={styles.social}>
               <h4>
                 <Translation keyCode="contact.social" />
               </h4>
@@ -152,7 +152,7 @@ const Footer = () => {
                   />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </nav>
       </div>

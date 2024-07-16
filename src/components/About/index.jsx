@@ -64,6 +64,7 @@ const About = () => {
 
           <div className={styles.hero}>
             <Image
+              unoptimized={true}
               src="/aboutBg.png"
               width={500}
               height={500}

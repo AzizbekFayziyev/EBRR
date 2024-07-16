@@ -96,7 +96,7 @@ const Contact = () => {
                   </h6>
                 </div>
 
-                <div className={styles.item}>
+                {/* <div className={styles.item}>
                   <h5>
                     <Translation keyCode="contact.social" />
                   </h5>
@@ -138,7 +138,7 @@ const Contact = () => {
                       />
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className={styles.item}>
@@ -172,7 +172,7 @@ const Contact = () => {
             </div>
 
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.2635113177857!2d69.27657607591166!3d41.25959807131635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6005c5142bf3%3A0xe04bf246835d2d7f!2sTashkent%20International%20Airport!5e0!3m2!1sen!2s!4v1720806462278!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.1876810908425!2d28.987188999999994!3d41.064890000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab71d37db2def%3A0x334c263fa2b6bf4b!2zRDogNjQsIE1lcmtleiwgQWJpZGUtaSBIw7xycml5ZXQgQ2QgTm86MjExLCAzNDM4MSDFnmnFn2xpL8Swc3RhbmJ1bCwgVMO8cmtpeWU!5e0!3m2!1sen!2s!4v1721112929078!5m2!1sen!2s"
               className={styles.map}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
