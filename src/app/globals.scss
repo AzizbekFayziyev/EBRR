@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// fonts
-@font-face {
-  font-family: "RF Dewi Condensed";
-  font-style: bold;
-  font-weight: 700;
-  src: url(/fonts/rf-dewi/RFDewiCondensed-Ultrabold.woff2) format("woff2"),
-    url(/fonts/rf-dewi/RFDewiCondensed-Ultrabold.woff) format("woff");
-}
-
 // global styles
 
 ::-webkit-scrollbar {
