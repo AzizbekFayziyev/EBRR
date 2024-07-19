@@ -21,6 +21,10 @@
 
     .buttons {
       @apply mt-10 flex gap-4;
+
+      button {
+        @apply w-full;
+      }
     }
   }
 }
